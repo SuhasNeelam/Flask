@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header class="jumbotron">
+      <div class="container">
+        <div class="row row-header">
+          <div class="col-12 col-sm-2"></div>
+          <div class="col-12 col-sm-5">
+            <h1>E-Pass Application</h1>
+            <p>Governament of Telangana</p>
+          </div>
+          <div class="col-12 col-sm-1 align-self-center"></div>
+          <div class="col-12 col-sm-2 align-self-center">
+            <!--img src="img/kcr.png" class="img-fluid"-->
+            <a
+              href="#ticket"
+              class="btn btn-block btn-primary"
+              aria-disabled="true"
+              role="button"
+              >Apply Here</a
+            >
+          </div>
+          <div class="col-12 col-sm-2"></div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row row-content align-items-center">
+        <div class="col-md-4">
+          <h2>Please Read</h2>
+          <hr />
+          <p>
+            Please fill down given below for the e-pass application process.
+            Kindly check all the entered details before submiting .
+          </p>
+          <p>
+            <b>Note :</b> A person can apply after <em>3 days</em> if the
+            application is not approved .
+          </p>
+        </div>
+      </div>
+      <div class="row row-content align-items-center" id="ticket">
+        <div class="col-12">
+          <h3>Applicant's Details</h3>
+          <br />
+        </div>
+        <div class="col-12 col-md-8">
+          <form method="post" action="/user_registration_dtls">
+            <div class="form-group row">
+              <label for="fname" class="col-md-2 col-form-label"
+                >First Name</label
+              >
+              <div class="col-md-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fname"
+                  name="fname"
+                  placeholder="First Name"
+                /><br />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="lname" class="col-md-2 col-form-label"
+                >Last Name</label
+              >
+              <div class="col-md-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lname"
+                  name="lname"
+                  placeholder="Last Name"
+                /><br />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="email" class="col-md-2 col-form-label">Email</label>
+              <div class="col-md-8">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="abc@gmail.com"
+                /><br />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="phoneNumber" class="col-md-2 col-form-label"
+                >Mobile Number</label
+              >
+              <div class="col-md-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  placeholder="xxxxx-xxxxx"
+                /><br />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="source_state" class="col-md-2 col-form-label"
+                >Source State</label
+              >
+              <div class="col-md-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="source_state"
+                  name="source_state"
+                  placeholder="State"
+                />
+              </div>
+              <label for="source" class="col-md-2 col-form-label"
+                >Source City</label
+              >
+              <div class="col-md-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="source"
+                  name="source"
+                  placeholder="Source"
+                /><br />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="dest_state" class="col-md-2 col-form-label"
+                >Destination State</label
+              >
+              <div class="col-md-3">
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle btn btn-outline-dark"
+                    data-toggle="dropdown"
+                    href="#"
+                    name="dest_state"
+                    id="dest_state"
+                  >
+                    Destination State
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    role="menu"
+                    aria-labelledby="dLabel"
+                  >
+                    <li><a href="#">asds</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">asds</a></li>
+                  </ul>
+                </div>
+              </div>
+              <label for="destination" class="col-md-2 col-form-label"
+                >Destination City</label
+              >
+              <div class="col-md-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="destination"
+                  name="destination"
+                  placeholder="Destination"
+                /><br />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="travel" class="col-2 col-form-label"
+                >Date of Travel</label
+              >
+              <div class="col-3">
+                <input class="form-control" type="text" id="travel" /><br />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="idcard" class="col-md-2 col-form-label"
+                >Aadhar Number</label
+              >
+              <div class="col-md-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idcard"
+                  name="idcard"
+                  placeholder="xxxx-xxxx-xxxx"
+                /><br />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-md-2 col-md-10">
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-md"></div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-7 col-sm-5">
+            <h5>For more info</h5>
+            <address>
+              <i class="fa fa-phone fa-lg"></i>: Tel.: 040 1234 5678<br />
+              <i class="fa fa-fax fa-lg"></i>: Fax: 040 2456 7890<br />
+              <i class="fa fa-envelope fa-lg"></i>: Email:
+              <a href="#">helpdeskHydHealth@.co.in</a>
+            </address>
+          </div>
+          <div class="col-12 col-sm-4 align-self-center">
+            <div class="text-center">
+              <a class="btn btn-social-icon btn-google" href="http://google.com"
+                ><i class="fa fa-google"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-twitter"
+                href="http://twitter.com/"
+                ><i class="fa fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-google"
+                href="http://youtube.com/"
+                ><i class="fa fa-youtube"></i
+              ></a>
+              <a class="btn btn-social-icon" href="mailto:"
+                ><i class="fa fa-envelope-o"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <p>© Copyright 2020 Telangana Governament</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

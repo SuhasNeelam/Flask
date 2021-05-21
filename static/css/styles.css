@@ -1,0 +1,46 @@
+.row-header{
+    margin: 0px auto;
+    padding: 0px auto;
+}
+.row-content {
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}
+.footer{
+    background-color: #D1C4E9;
+    margin: 0px auto;
+    padding:20px 0px 20px 0px;
+}
+.jumbotron{
+    padding: 70px 30px 70px 30px;
+    margin:0px auto;
+    background: rgb(175, 174, 245);
+    color: rgb(25, 10, 77);
+}
+.address{
+    font-size: 80%;
+    margin:0px auto;
+    color: #0f0f0f;
+}
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+  }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration:rgb(32, 131, 65);
+  }
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration:unset;
+  }
+  .active{
+      color:rgb(25, 10, 77);
+  }
